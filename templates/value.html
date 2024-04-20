@@ -1,0 +1,29 @@
+{% extends 'land.html' %} 
+
+{% block head %} 
+    <title>Value</title>
+{% endblock %}
+
+{% block body %}
+    <div style="text-align: center;">
+      <div style="background: white;">
+        <strong><h1 style="font-family: 'Staatliches', cursive;font-size: 60px;padding-top: 20px;text-align:center;" class="text-center">BANK NOTE AUTHENTICATION</h1></strong>
+        <hr>
+      </div>
+      <form action="/Authentication" method="POST">
+        <label for="variance"><b>VARIANCE</b> </label>
+        <input style="margin: auto;" class="form-control" type="text" name="variance" id="variance" required>
+        <br>
+        <label for="skewness"><b>SKEWNESS</b> </label>
+        <input style="margin: auto;"  class="form-control" type="text" name="skewness" id="skewness" required>
+        <br>
+        <label for="variance"><b>CURTOSIS</b> </label>
+        <input style="margin: auto;"  class="form-control" type="text" name="curtosis" id="curtosis" required>
+        <br>
+        <label for="variance"><b>ENTROPY</b> </label>
+        <input style="margin: auto;"  class="form-control" type="text" name="entropy" id="entropy" required>
+        <p><small>All values are necessary</small></p>
+        <input style="font-family: 'Staatliches', cursive;" class='btn btn-dark btn-lg' type="submit" name="predicted" id="predicted" value="AUTHENTICATE">
+      </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'land.html' %}
+
+{% block head %} 
+    <title>File Result</title>
+{% endblock %}
+
+{% block body %}
+    <div style="text-align: center;">
+        <div style="background: white;">
+            <strong><h1 style="font-family: 'Staatliches', cursive;font-size: 60px;padding-top: 20px;" class="text-center">FILE OUTCOMES</h1></strong>
+            <hr>
+        </div>
+        <div>
+            {% for i in range(outcomes) %}
+            {% if pred[i]==1 %}
+                <strong><p>{{i+1}}. AUTHORISED</p></strong>
+            {% else %}
+                <strong><p>{{i+1}}. UNAUTHORISED</p></strong>
+            {% endif %}
+        {% endfor%}
+        </div>
+        <div>
+            <a style="margin-top: 20px;font-family: 'Staatliches', cursive;" class="btn btn-dark btn-lg"href="/File_Authentication">AUTHENTICATE AGAIN</i></a>
+        </div>
+    </div>
+{% endblock %}
